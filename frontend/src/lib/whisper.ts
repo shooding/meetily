@@ -126,6 +126,20 @@ export const MODEL_CONFIGS: Record<string, Partial<ModelInfo>> = {
     size_mb: 1031,
     accuracy: 'High',
     speed: 'Slow'
+  },
+
+  // Community fine-tuned models (GGML conversions)
+  'breeze-asr-26': {
+    description: 'Breeze-ASR-26, Mandarin/Taiwanese Hokkien fine-tune of Whisper large-v2.',
+    size_mb: 2951,
+    accuracy: 'High',
+    speed: 'Slow'
+  },
+  'breeze-asr-26-q5_0': {
+    description: 'Quantized Breeze-ASR-26, Mandarin/Taiwanese Hokkien optimized.',
+    size_mb: 1031,
+    accuracy: 'High',
+    speed: 'Slow'
   }
 };
 
@@ -225,6 +239,8 @@ export function getModelTagline(modelName: string, speed: ProcessingSpeed, accur
     featureText = 'Balanced quality';
   } else if (baseName === 'tiny') {
     featureText = 'Fastest option';
+  } else if (baseName === 'breeze-asr-26') {
+    featureText = 'Mandarin & Taiwanese Hokkien';
   }
 
   // Add quantization note if applicable

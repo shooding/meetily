@@ -379,14 +379,16 @@ export function ModelManager({
       "medium-q5_0": "Medium",
       "large-v3-q5_0": "Large V3 Compressed",
       "large-v3-turbo": "Large V3 Turbo",
-      "large-v3": "Large V3"
+      "large-v3": "Large V3",
+      "breeze-asr-26": "Breeze ASR 26",
+      "breeze-asr-26-q5_0": "Breeze ASR 26 Compressed"
     };
 
     const basicModelNames = ["small", "medium-q5_0", "large-v3-q5_0", "large-v3-turbo", "large-v3"];
     if (basicModelNames.includes(modelName)) {
       return modelNameMapping[modelName] || modelName;
     }
-    return `Whisper ${modelName}`;
+    return modelNameMapping[modelName] || `Whisper ${modelName}`;
   };
 
   if (loading) {

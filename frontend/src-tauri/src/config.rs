@@ -33,4 +33,8 @@ pub const WHISPER_MODEL_CATALOG: &[(&str, &str, u32, &str, &str, &str)] = &[
     ("medium-q5_0", "ggml-medium-q5_0.bin", 514, "High", "Medium", "Quantized medium model, professional quality"),
     ("large-v3-turbo-q5_0", "ggml-large-v3-turbo-q5_0.bin", 547, "High", "Medium", "Quantized large model, best balance"),
     ("large-v3-q5_0", "ggml-large-v3-q5_0.bin", 1031, "High", "Slow", "Quantized large model, high accuracy"),
+
+    // Community fine-tuned models (GGML conversions)
+    ("breeze-asr-26", "ggml-breeze-asr-26.bin", 2951, "High", "Slow", "Breeze-ASR-26, Mandarin/Taiwanese Hokkien fine-tune of Whisper large-v2"),
+    ("breeze-asr-26-q5_0", "ggml-breeze-asr-26-q5_0.bin", 1031, "High", "Slow", "Quantized Breeze-ASR-26, Mandarin/Taiwanese Hokkien optimized"),
 ];

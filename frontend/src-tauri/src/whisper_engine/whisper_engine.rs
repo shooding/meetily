@@ -938,6 +938,10 @@ impl WhisperEngine {
             "large-v3-turbo-q5_0" => "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q5_0.bin",
             "large-v3-q5_0" => "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-q5_0.bin",
 
+            // Community fine-tuned models (GGML conversions of MediaTek-Research/Breeze-ASR-26)
+            "breeze-asr-26" => "https://huggingface.co/doggy8088/Breeze-ASR-26-GGML/resolve/main/ggml-model.bin",
+            "breeze-asr-26-q5_0" => "https://huggingface.co/doggy8088/Breeze-ASR-26-GGML/resolve/main/ggml-model-q5_0.bin",
+
             _ => return Err(anyhow!("Unsupported model: {}", model_name))
         };
         
